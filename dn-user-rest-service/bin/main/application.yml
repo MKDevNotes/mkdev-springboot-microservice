@@ -1,0 +1,47 @@
+spring.datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:userexample;MODE=MySQL
+
+spring.jpa:
+    hibernate.ddl-auto: create-drop
+    
+server:
+  port: 8090
+  
+ 
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+
+#security.ignored=true
+#security.basic.enabled=false
+
+#logging.level.org.springframework.web=INFO
+#logging.level.org.hibernate=INFO
+#logging.file=c:/temp/my-log/app.log
+  
+#logging.level.org.hibernate.SQL=DEBUG
+#logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        type: trace
+        
+logging:
+  level:
+    org:
+      hibernate:
+        SQL:
+          TRACE
+        type:
+          descriptor:
+            sql:
+              BasicBinder:
+                TRACE
